@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Live Sports Scores",
+  "version": "2.5",
+  "description": "View live NBA, NFL, NHL, MLB, and Premier League scores with box scores",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://site.api.espn.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

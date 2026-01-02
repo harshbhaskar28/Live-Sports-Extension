@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Sports Scores</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🏀🏈🏒⚾⚽ Live Sports</h1>
+      <button id="refresh-btn" class="refresh-btn">↻</button>
+    </header>
+    
+    <!-- Date Navigation -->
+    <div class="date-nav">
+      <button id="prev-day" class="nav-btn">← Prev</button>
+      <div id="current-date" class="current-date"></div>
+      <button id="next-day" class="nav-btn">Next →</button>
+    </div>
+    
+    <div id="loading" class="loading">Loading scores...</div>
+    <div id="error" class="error" style="display: none;"></div>
+    <div id="last-updated" class="last-updated"></div>
+    
+    <div id="scores-container">
+      <!-- NBA Section -->
+      <div class="league-section" id="nba-section" style="display: none;">
+        <h2 class="league-title">🏀 NBA</h2>
+        <div id="nba-games" class="games-container"></div>
+      </div>
+      
+      <!-- NFL Section -->
+      <div class="league-section" id="nfl-section" style="display: none;">
+        <h2 class="league-title">🏈 NFL</h2>
+        <div id="nfl-games" class="games-container"></div>
+      </div>
+      
+      <!-- NHL Section -->
+      <div class="league-section" id="nhl-section" style="display: none;">
+        <h2 class="league-title">🏒 NHL</h2>
+        <div id="nhl-games" class="games-container"></div>
+      </div>
+      
+      <!-- MLB Section -->
+      <div class="league-section" id="mlb-section" style="display: none;">
+        <h2 class="league-title">⚾ MLB</h2>
+        <div id="mlb-games" class="games-container"></div>
+      </div>
+      
+      <!-- Premier League Section -->
+      <div class="league-section" id="soccer-section" style="display: none;">
+        <h2 class="league-title">⚽ Premier League</h2>
+        <div id="soccer-games" class="games-container"></div>
+      </div>
+    </div>
+    
+    <div id="no-games" class="no-games" style="display: none;">
+      <p>No games scheduled for this date</p>
+    </div>
+  </div>
+  
+  <!-- Box Score Modal -->
+  <div id="box-score-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modal-title">Box Score</h2>
+        <button id="close-modal" class="close-btn">×</button>
+      </div>
+      <div id="modal-body" class="modal-body">
+        <div class="loading">Loading box score...</div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
